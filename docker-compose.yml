@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    image: php-cli
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./:/var/www/marac19901990/paratest-bundle
+      - ./var/log/:/var/www/marac19901990/paratest-bundle/var/log:delegated
+      - ./var/cache:/var/www/marac19901990/paratest-bundle/var/cache:delegated
+      - ./var/coverage:/opt/phpstorm-coverage
+      - /etc/passwd:/etc/passwd:ro
+      - /etc/group:/etc/group:ro
+      - .composer:$HOME/.composer
+    user: ${UID}:${GID}

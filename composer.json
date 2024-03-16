@@ -1,0 +1,24 @@
+{
+    "name": "marac19901990/paratest-setup",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Marac\\ParatestSetup\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Marko Petrovic",
+            "email": "maracs1990@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^8"
+    },
+    "require-dev": {
+        "brianium/paratest": "^7.4",
+        "phpunit/phpunit": ">9"
+    }
+}
